@@ -1,0 +1,2 @@
+# nrf52 is nrf52810
+MCU_SUB_VARIANT = nrf52810
