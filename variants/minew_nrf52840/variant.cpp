@@ -61,8 +61,8 @@ const uint32_t g_ADigitalPinMap[] = // - Provisional pinout, may be subject to c
    5,  // D27 is P0.05 (A3) (HF) (SCL1)
   28,  // D28 is P0.28 (A4)
   29,  // D29 is P0.29 (A5)
-  30,  // D30 is P0.30 (A6, Battery)
-  31,  // D31 is P0.31 (A7, ARef)
+  30,  // D30 is P0.30 (A6, VBAT)
+  31,  // D31 is P0.31 (A7, AREF)
 
 
   // I2C pins
@@ -75,29 +75,30 @@ const uint32_t g_ADigitalPinMap[] = // - Provisional pinout, may be subject to c
 
 
   // SPI pins
-  15,  // D35 is P0.15 (HF) (SPI_MOSI) 
-  13,  // D36 is P0.13 (HF) (SPI_MISO)
-  19,  // D37 is P0.19 (HF) (SPI_SCK)   
-  17,  // D38 is P0.17 (HF) (SPI_nCS)  
+  15,  // D36 is P0.15 (HF) (SPI_MOSI) 
+  13,  // D37 is P0.13 (HF) (SPI_MISO)
+  19,  // D38 is P0.19 (HF) (SPI_SCK)   
+  17,  // D39 is P0.17 (HF) (SPI_nCS)  
 
   // SPI1 pins - Suggested, not definitive - 
-  11,  // D39 is P0.11 (HF) (SPI1_MOSI1, D11)
-   8,  // D40 is P0.08 (HF) (SPI1_MISO1, D12)
-  41,  // D41 is P1.09 (HF) (SPI1_SCK1,  D13)
-  40,  // D42 is P1.08 (HF) (SPI1_nCS1,  D10)
+  11,  // D40 is P0.11 (HF) (SPI1_MOSI1, D11)
+   8,  // D41 is P0.08 (HF) (SPI1_MISO1, D12)
+  41,  // D42 is P1.09 (HF) (SPI1_SCK1,  D13)
+  40,  // D43 is P1.08 (HF) (SPI1_nCS1,  D10)
 
 
   // QSPI pins (not exposed via any header / test point)
-  23,  // D43 is P0.23 (HF) (QSPI CLK)   
-  25,  // D44 is P0.25 (HF) (QSPI CS)
-  20,  // D45 is P0.20 (HF) (QSPI Data 0)
-  22,  // D46 is P0.22 (HF) (QSPI Data 1)
-  24,  // D47 is P0.24 (HF) (QSPI Data 2)
-  21,  // D48 is P0.21 (HF) (QSPI Data 3)
+  23,  // D44 is P0.23 (HF) (QSPI CLK)   
+  25,  // D45 is P0.25 (HF) (QSPI CS)
+  20,  // D46 is P0.20 (HF) (QSPI Data 0)
+  22,  // D47 is P0.22 (HF) (QSPI Data 1)
+  24,  // D48 is P0.24 (HF) (QSPI Data 2)
+  21,  // D49 is P0.21 (HF) (QSPI Data 3)
 
+  32,  // D50 is P1.00 SWO   (attached to debug header)
 
   //
-  // Thus, there are 49 defined pins
+  // Thus, there are 51 defined pins
   //
   //
   // The remaining pins are not usable:
@@ -107,7 +108,6 @@ const uint32_t g_ADigitalPinMap[] = // - Provisional pinout, may be subject to c
   //  0,      // P0.00 is XL1   (attached to 32.768kHz crystal)
   //  1,      // P0.01 is XL2   (attached to 32.768kHz crystal)
   // 18,      // P0.18 is RESET (attached to switch)
-  // 32,      // P1.00 is SWO   (attached to debug header)
   //
 
 };

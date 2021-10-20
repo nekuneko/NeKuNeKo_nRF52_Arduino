@@ -38,8 +38,8 @@ extern "C"
 #endif // __cplusplus
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (49)
-#define NUM_DIGITAL_PINS     (49)
+#define PINS_COUNT           (51)
+#define NUM_DIGITAL_PINS     (51)
 #define NUM_ANALOG_INPUTS    (8) // A6 is used for battery, A7 is analog reference
 #define NUM_ANALOG_OUTPUTS   (0)
 
@@ -94,6 +94,9 @@ static const uint8_t A7  = PIN_A7;
 #define PIN_NFC1           (21)
 #define PIN_NFC2           (22)
 
+static const uint8_t INT1 = 16u;
+static const uint8_t INT2 = 17u;
+static const uint8_t SWO  = 51u;
 static const uint8_t AREF = PIN_AREF;
 
 
@@ -121,11 +124,11 @@ static const uint8_t AREF = PIN_AREF;
  */
 #define SPI_INTERFACES_COUNT 1
 
-#define PIN_SPI_MOSI         (35)
-#define PIN_SPI_MISO         (36)
-#define PIN_SPI_SCK          (37)
+#define PIN_SPI_MOSI         (36)
+#define PIN_SPI_MISO         (37)
+#define PIN_SPI_SCK          (38)
 
-static const uint8_t SS   =  (38);
+static const uint8_t SS   =  (39);
 static const uint8_t MOSI = PIN_SPI_MOSI ;
 static const uint8_t MISO = PIN_SPI_MISO ;
 static const uint8_t SCK  = PIN_SPI_SCK ;
@@ -141,12 +144,12 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 
 
 // QSPI Pins
-#define PIN_QSPI_SCK         43
-#define PIN_QSPI_CS          44
-#define PIN_QSPI_IO0         45
-#define PIN_QSPI_IO1         46
-#define PIN_QSPI_IO2         47
-#define PIN_QSPI_IO3         48
+#define PIN_QSPI_SCK         44
+#define PIN_QSPI_CS          45
+#define PIN_QSPI_IO0         46
+#define PIN_QSPI_IO1         47
+#define PIN_QSPI_IO2         48
+#define PIN_QSPI_IO3         49
 
 // On-board SPI/QSPI Flash
 #define EXTERNAL_FLASH_DEVICES   GD25Q16C
