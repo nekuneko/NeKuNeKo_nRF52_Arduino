@@ -20,14 +20,17 @@ BLEDfu bledfu;
 void setup() 
 {
   Serial.begin(115200);
-  while ( !Serial ) delay(10);   // for nrf52840 with native usb
+
+#if CFG_DEBUG
+  // Blocking wait for connection when debug mode is enabled via IDE
+  while ( !Serial ) yield();
+#endif
 
   Serial.println("Bluefruit52 Blinky Example");
   Serial.println("--------------------------\n");
 
   Bluefruit.begin();
   Bluefruit.setTxPower(4);    // Check bluefruit.h for supported values
-  Bluefruit.setName("Bluefruit52");
 
   // To be consistent OTA DFU should be added first if it exists
   bledfu.begin();

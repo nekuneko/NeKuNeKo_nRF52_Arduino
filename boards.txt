@@ -1,37 +1,17 @@
-# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
-# Copyright (c) 2016 Sandeep Mistry All right reserved.
-# Copyright (c) 2017 Adafruit Industries.  All right reserved.
-# Copyright (c) 2021 NeKuNeKo Inc.  All right reserved.
-#
-#
-# This library is free software; you can redistribute it and/or
-# modify it under the terms of the GNU Lesser General Public
-# License as published by the Free Software Foundation; either
-# version 2.1 of the License, or (at your option) any later version.
-#
-# This library is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-# See the GNU Lesser General Public License for more details.
-#
-# You should have received a copy of the GNU Lesser General Public
-# License along with this library; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
-menu.softdevice=Bootloader
+menu.softdevice=SoftDevice
 menu.debug=Debug
 menu.xtal=32.768kHz Clock Source
 menu.qspi=External Flash
-
-
 
 # ----------------------------------
 # MINEW MS50SFA2 (nRF52832 Mini)
 # ----------------------------------
 minew52832mini.name=MINEW MS50SFA2 (nRF52832 Mini)
-minew52832mini.bootloader.tool=bootburn
+
+# VID/PID for Bootloader, Arduino & CircuitPython
 
 # Upload
+minew52832mini.bootloader.tool=bootburn
 minew52832mini.upload.tool=nrfutil
 minew52832mini.upload.protocol=nrfutil
 minew52832mini.upload.use_1200bps_touch=false
@@ -52,7 +32,7 @@ minew52832mini.build.extra_flags=-DNRF52832_XXAA -DNRF52
 minew52832mini.build.ldscript=nrf52832_s132_v6.ld
 
 # SofDevice Menu
-minew52832mini.menu.softdevice.s132v6=0.3.2 SoftDevice s132 6.1.1
+minew52832mini.menu.softdevice.s132v6=S132 6.1.1
 minew52832mini.menu.softdevice.s132v6.build.sd_name=s132
 minew52832mini.menu.softdevice.s132v6.build.sd_version=6.1.1
 minew52832mini.menu.softdevice.s132v6.build.sd_fwid=0x00B7
@@ -80,9 +60,11 @@ minew52832mini.menu.xtal.off.build.xtal_flags=-DUSE_LFRC
 # MINEW MS50SFB2 (nRF52832)
 # ----------------------------------
 minew52832.name=MINEW MS50SFB2 (nRF52832)
-minew52832.bootloader.tool=bootburn
+
+# VID/PID for Bootloader, Arduino & CircuitPython
 
 # Upload
+minew52832.bootloader.tool=bootburn
 minew52832.upload.tool=nrfutil
 minew52832.upload.protocol=nrfutil
 minew52832.upload.use_1200bps_touch=false
@@ -103,7 +85,7 @@ minew52832.build.extra_flags=-DNRF52832_XXAA -DNRF52
 minew52832.build.ldscript=nrf52832_s132_v6.ld
 
 # SofDevice Menu
-minew52832.menu.softdevice.s132v6=0.3.2 SoftDevice s132 6.1.1
+minew52832.menu.softdevice.s132v6=S132 6.1.1
 minew52832.menu.softdevice.s132v6.build.sd_name=s132
 minew52832.menu.softdevice.s132v6.build.sd_version=6.1.1
 minew52832.menu.softdevice.s132v6.build.sd_fwid=0x00B7
@@ -132,7 +114,7 @@ minew52832.menu.xtal.off.build.xtal_flags=-DUSE_LFRC
 # ----------------------------------
 minew52840.name=MINEW MS88SF3 (nRF52840)
 
-# VID/PID for bootloader with/without UF2, Arduino + Circuitpython App
+# VID/PID for Bootloader, Arduino & CircuitPython
 minew52840.vid.0=0x1993
 minew52840.pid.0=0xB240
 minew52840.vid.1=0x1993
@@ -165,7 +147,7 @@ minew52840.build.vid=0x1993
 minew52840.build.pid=0x0F40
 
 # SofDevice Menu
-minew52840.menu.softdevice.s140v6=0.3.2 SoftDevice s140 6.1.1
+minew52840.menu.softdevice.s140v6=S140 6.1.1
 minew52840.menu.softdevice.s140v6.build.sd_name=s140
 minew52840.menu.softdevice.s140v6.build.sd_version=6.1.1
 minew52840.menu.softdevice.s140v6.build.sd_fwid=0x00B6
@@ -200,7 +182,7 @@ minew52840.menu.qspi.off.build.qspi_flags=-DEXTERNAL_FLASH_USE_SPI
 # ----------------------------------
 ebyte52840.name=Ebyte E73-2G4M08S1C (nRF52840)
 
-# VID/PID for bootloader with/without UF2, Arduino + Circuitpython App
+# VID/PID for Bootloader, Arduino & CircuitPython
 ebyte52840.vid.0=0x1993
 ebyte52840.pid.0=0xB24E
 ebyte52840.vid.1=0x1993
@@ -233,7 +215,7 @@ ebyte52840.build.vid=0x1993
 ebyte52840.build.pid=0x0E40
 
 # SofDevice Menu
-ebyte52840.menu.softdevice.s140v6=0.3.2 SoftDevice s140 6.1.1
+ebyte52840.menu.softdevice.s140v6=S140 6.1.1
 ebyte52840.menu.softdevice.s140v6.build.sd_name=s140
 ebyte52840.menu.softdevice.s140v6.build.sd_version=6.1.1
 ebyte52840.menu.softdevice.s140v6.build.sd_fwid=0x00B6
@@ -263,13 +245,19 @@ ebyte52840.menu.qspi.on.build.qspi_flags=-DEXTERNAL_FLASH_USE_QSPI
 
 
 
-# ----------------------------------
-# Nordic nRF52840DK (PCA10056)
-# ----------------------------------
-pca10056.name=Nordic nRF52840DK (PCA10056)
-pca10056.bootloader.tool=bootburn
+# -----------------------------------
+# Nordic nRF52840 DK
+# -----------------------------------
+pca10056.name=Nordic nRF52840 DK
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+pca10056.vid.0=0x239A
+pca10056.pid.0=0x8029
+pca10056.vid.1=0x239A
+pca10056.pid.1=0x0029
 
 # Upload
+pca10056.bootloader.tool=bootburn
 pca10056.upload.tool=nrfutil
 pca10056.upload.protocol=nrfutil
 pca10056.upload.use_1200bps_touch=true
@@ -290,8 +278,8 @@ pca10056.build.ldscript=nrf52840_s140_v6.ld
 pca10056.build.vid=0x239A
 pca10056.build.pid=0x8029
 
-# SofDevice Menu
-pca10056.menu.softdevice.s140v6=0.3.2 SoftDevice s140 6.1.1
+# SoftDevice Menu
+pca10056.menu.softdevice.s140v6=S140 6.1.1
 pca10056.menu.softdevice.s140v6.build.sd_name=s140
 pca10056.menu.softdevice.s140v6.build.sd_version=6.1.1
 pca10056.menu.softdevice.s140v6.build.sd_fwid=0x00B6
@@ -312,7 +300,7 @@ pca10056.menu.debug.l3.build.sysview_flags=-DCFG_SYSVIEW=1
 # ----------------------------------
 # Kitten Syringe nRF52833
 # ----------------------------------
-kitten52833.name=Kitten Syringe nRF52833
+kitten52833.name=Kitten Syringe nRF52833 (NSFW)
 
 # VID/PID for bootloader with/without UF2, Arduino + Circuitpython App
 kitten52833.vid.0=0x1993
