@@ -17,7 +17,7 @@
 # License along with this library; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-name=NeKuNeKo nRF52 Boards
+name=NeKuNeKo nRF52 Boards (BETA)
 version=1.0.0
 
 # Compile variables
